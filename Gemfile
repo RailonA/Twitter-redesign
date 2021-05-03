@@ -24,7 +24,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+# User Hirb to enhance console views
+gem 'hirb', '~> 0.7.3'
+# Use cloudinary to host profile pics
+gem 'cloudinary'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
