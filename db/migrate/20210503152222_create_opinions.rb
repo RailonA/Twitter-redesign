@@ -6,5 +6,7 @@ class CreateOpinions < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_index :opinions, :author_id
+    add_foreign_key :opinions, :users, column: :author_id
   end
 end

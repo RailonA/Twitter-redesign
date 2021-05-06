@@ -1,0 +1,24 @@
+
+<h1 class='text-center'>Sign up</h1>
+<div class='container'>
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col-md-4 offset-4">
+    <%= form_with(model: @user, local: true) do |f| %>
+    <%= render "shared/error_messages" %>
+    <%= f.label :username %>
+    <%= f.text_field :username, class: "mb-1 form-control" %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "mb-1 form-control" %>
+    <%= f.label :photo, "Profile picture" %>
+    <%= f.file_field :photo, class: "mb-1 form-control" %>
+    <%= f.label :cover_image, "Cover picture" %>
+    <%= f.file_field :cover_image, class: "mb-1 form-control" %>
+    <%= f.submit "Create my account", class: "mt-2 btn btn-primary" %>
+    <% end %>
+    <%= link_to "I already have an account", login_path, class: "mx-2" %>
+  </div>
+</div>

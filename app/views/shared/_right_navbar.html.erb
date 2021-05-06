@@ -1,0 +1,30 @@
+<div class="col-3">
+    <div class="text-center">
+        <% if @user2.photo.attached? %>
+        <%= cl_image_tag(@user2.photo.key, :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+        <% else %>
+        <%= cl_image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+        <% end %>
+        <div class='d-flex flex-column w-100'>
+            <div class='d-flex justify-content-center align-items-center flex-column flex-md-row'>
+            </div>
+            <span class='align-self-center bold-name-right text-dark text-center mt-1'><%= @user2.fullname %></span>
+            <span class='align-self-center username text-center color-light-grey'>@<%= @user2.username %></span>
+
+            <div class='d-flex flex-column flex-md-row'>
+                <div class='border flex-grow-1'>
+                    <span class='text-center d-block font-weight-bolder'><%= @user2.opinions.count %></span>
+                    <span class='text-center d-block bold-flw color-light-grey'>Opinions</span>
+                </div>
+                <div class='border flex-grow-1'>
+                    <span class='text-center d-block font-weight-bolder'><%= @user2.followers.count %></span>
+                    <span class='text-center d-block bold-flw color-light-grey'>Following</span>
+                </div>
+                <div class='border flex-grow-1'>
+                    <span class='text-center d-block font-weight-bolder'><%= @user2.followed_users.count %></span>
+                    <span class='text-center d-block bold-flw color-light-grey'>Followers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

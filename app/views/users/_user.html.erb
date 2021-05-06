@@ -1,0 +1,10 @@
+
+
+    <div class="">
+    <h6><%= link_to user.username, user_path(user.id), class: 'post-author' %></h6>
+        <%= form_with url: "/followings", method: :post do |f| %>
+        <%= f.hidden_field :follower_id, value: current_user.id %>
+        <%= f.hidden_field :followed_id, value: user.id %>
+        <%= f.submit "Follow", class: "" %>
+        <% end %>
+    </div>
