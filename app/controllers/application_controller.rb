@@ -1,18 +1,13 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?
+    include SessionsHelper
 
-  def current_user
-    @current_user ||= User.find_by(username: session[:username]) if session[:username]
+    private
+  
+    def logged_in_user
+      return unless logged_in? == false
+  
+      store_location
+      flash[:danger] = 'Please log in.'
+      redirect_to login_url
+    end
   end
-
-  def logged_in?
-    !current_user.nil?
-  end
-
-  def require_user
-    return if logged_in?
-
-    flash[:alert] = 'Log in to perform this action'
-    redirect_to signup_path
-  end
-end

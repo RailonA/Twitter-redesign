@@ -13,35 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
- @import "bootstrap";
-body { 
- height: 100%;
- background-color: rgb(102, 102, 160);
-display: flex;
-flex-direction: column;
-}
-
-.navbar {
- 
-}
-
-//  .left-sidebar{
-//     background-color: rgb(54, 54, 58);
-//     position:absolute;
-//     top:0;
-//     bottom:0;
-//     padding:0;
-    
-
-//  }
-
-
-//  .left-sidebar-top {
-//     padding:20px;
-//     color:white;
-// }
-//  .left-sidebar-bottom {
-//     background-color: rgb(100, 100, 104);
-//     height: 100%;
-// }

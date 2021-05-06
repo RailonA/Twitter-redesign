@@ -1,47 +1,31 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.create(user_params)
-    if @user.save
-      session[:username] = @user.username
-      flash[:notice] = 'Account is created sucessfully'
-      redirect_to root_path
-    else
-      flash[:alert] = 'Something went wrong...'
-      render new_user_path
+    before_action :logged_in_user, only: [:show]
+  
+    def show
+      @user = current_user
+      @user2 = User.find(params[:id])
+      @own_opinions = Opinion.where(author_id: @user2)
+    end
+  
+    def new
+      @user = User.new
+    end
+  
+    def create
+      @user = User.new(user_params)
+      if @user.save
+        log_in @user
+        flash[:success] = 'Welcome to the app!'
+        redirect_to '/'
+      else
+        render 'new'
+      end
+    end
+  
+    private
+  
+    def user_params
+      params.require(:user).permit(:username, :name, :photo, :cover_image)
     end
   end
-
-  def show
-    @user = User.find_by(username: params[:username])
-    @opinion = Opinion.new
-    @opinions = @user.opinions.order_by_most_recent
-  end
-
-  def edit
-    @user = current_user
-  end
-
-  def update
-    @user = current_user
-    @user.update(user_params)
-    if @user.save
-      flash[:notice] = 'profile updated!'
-      redirect_to root_path(current_user)
-    else
-      flash[:alert] = 'Something went wrong ...'
-      render 'edit'
-    end
-  end
-
-  private
-
-  def user_params
-    params.require(:user).permit(:username, :name, :photo, :cover_image)
-  end
-
-end
   

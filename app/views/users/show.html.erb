@@ -19,13 +19,13 @@
             <div>
               <% if @user2.cover_image.attached? %>
               <%= cl_image_tag @user2.cover_image.key, :width => 1200, :height => 200, :crop=>"fill" %>
-              <% else %>
-              <%= cl_image_tag("  ", :width => 1200, :height => 200, :type=>"fetch") %>
               <% end %>
               <h4 class="text-center">Opinions</h4>
               <div>
                 <%= render @own_opinions %>
+             
               </div>  -->error :PhrasesTermsController#new is missing a template for request formats: text/html
+           
             </div>
             <div>
 

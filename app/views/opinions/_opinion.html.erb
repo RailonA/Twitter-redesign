@@ -9,16 +9,17 @@
       <div class='d-flex flex-column w-100 mx-4'>
         <div class='d-flex justify-content-between'>
           <span class='font-weight-bold text-dark'>
-            <%= link_to  @user, user_path( @user ) %>
+            <%= link_to  opinion.user.username, user_path( @user ) %>
           </span>
           <div class='mx-2'>
             <span> <%= opinion.created_at.try(:strftime,("%Y/%m/%d")) %> </span> <br>
           </div>
         </div>
         <span><%= opinion.text %></span>
-        <span style='font-size: 13px;'>Votes:<%= num_of_comments(opinion) %> </span>
-        <%# <span><%= link_to('vote up', opinion_votes_path(opinion_id: opinion.id), method: :post) %></span> %>
+        <span style='font-size: 13px;'>Votes:<%= num_of_votes(opinion) %> </span>
+        <span><%= link_to('vote up', opinion_votes_path(opinion_id: opinion.id), method: :post) %></span>
       </div>
     </div>
   </div>
 </div>
+
