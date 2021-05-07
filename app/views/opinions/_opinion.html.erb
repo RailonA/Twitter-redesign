@@ -1,8 +1,8 @@
 <div class='bg-white w-75 border rounded-border p-3 my-4 color-light-grey'>
   <div class='d-flex flex-column'>
     <div class='d-flex my-2'>
-      <% if current_user.photo.attached? %>
-      <%= image_tag(current_user.photo, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+      <% if opinion.user.photo.attached? %>
+      <%= image_tag(opinion.user.photo, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
       <% else %>
       <%= image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
       <% end %>

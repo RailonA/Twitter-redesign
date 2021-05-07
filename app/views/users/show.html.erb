@@ -18,7 +18,7 @@
           <div class="col-9">
             <div>
               <% if @user2.cover_image.attached? %>
-              <%= cl_image_tag @user2.cover_image.key, :width => 1200, :height => 200, :crop=>"fill" %>
+              <%= image_tag @user2.cover_image.key, :width => 1200, :height => 200, :crop=>"fill" %>
               <% end %>
               <h4 class="text-center">Opinions</h4>
               <div>
