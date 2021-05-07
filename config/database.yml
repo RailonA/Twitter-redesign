@@ -82,4 +82,4 @@ production:
   <<: *default
   database:  twitter-redesign_production
   username:  twitter-redesign
-  password: <%= ENV[' twitter-redesign'] %>
+  password: <%= ENV['twitter-redesign'] %>

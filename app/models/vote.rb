@@ -1,6 +1,6 @@
 class Vote < ApplicationRecord
-    validates :uder_id, uniqueness: {scope: :opinion_id}
+  validates :uder_id, uniqueness: { scope: :opinion_id }
 
-    belongs_to :user
-    belongs_to :opinion
+  belongs_to :user
+  belongs_to :opinion
 end
