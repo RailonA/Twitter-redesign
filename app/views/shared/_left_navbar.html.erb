@@ -1,6 +1,5 @@
 
-<div class="container left-sidebar ">
-    <div class="text-center left-sidebar-top">
+    <div class="text-center left-navbar-top p-3">
       <div class="p-3">
        <% if current_user.photo.attached? %>
        <%= image_tag(current_user.photo, :width=>150, :height=>150, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto)  %>
@@ -25,8 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="left-sidebar-bottom ">
+    <div class="left-navbar-bottom ">
         <a href="/" class="d-block nav-link border-0"><i class="icon ion-md-apps lead mr-2"></i>Home</a>
     </div>
-</div>
     

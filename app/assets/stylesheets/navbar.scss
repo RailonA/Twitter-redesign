@@ -1,14 +1,32 @@
 
 .header-navbar {
-     background-color: #5b9aff;
+     background-color: #949494;
 }
 
 .navbar-toggler {
-    // margin-left: 90%;
     color:white;
+}
+
+.fa-twitter {
+    color:white;
+    font-size: 20px;
 }
 
 .nav-link {
     color:white;
     font-weight: bold;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.left-navbar {
+    background-color: #c7c7c7;
+}
+
+.left-navbar-top {
+    background-color: #404a58;
+    color: white;
 }

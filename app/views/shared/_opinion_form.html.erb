@@ -1,8 +1,7 @@
 <div class="">
 <%= form_with url: "/opinions", method: :post do |f| %>
 <%= f.hidden_field :author_id, value: current_user.id %>
-<%= f.label :text, 'Express yourself' %>
 <%= f.text_field :text, class: 'mb-1 form-control' %>
-<%= f.submit "Submit new opinion", class: "mt-2 btn btn-primary" %>
+<%= f.submit "Submit", class: "mt-2 btn btn-primary" %>
 <% end %>
 </div>

@@ -16,8 +16,10 @@
           </div>
         </div>
         <span><%= opinion.text %></span>
-        <span style='font-size: 13px;'>Votes:<%= num_of_likes(opinion) %> </span>
+        <div class="d-flex">
         <span><%= link_to('Like', opinion_likes_path(opinion_id: opinion.id), method: :post) %></span>
+        <span>:<%= num_of_likes(opinion) %> </span>
+      </div>
       </div>
     </div>
   </div>

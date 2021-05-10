@@ -17,28 +17,8 @@
  @import "navbar";
  @import "opinion";
 
-html {
- height: 100%;
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
 }
-
-//  .left-sidebar{
-//     background-color: rgb(54, 54, 58);
-//     position:absolute;
-//     top:0;
-//     bottom:0;
-//     padding:0;
-    
-
-//  }
-
-
-//  .left-sidebar-top {
-//     padding:20px;
-//     color:white;
-// }
-//  .left-sidebar-bottom {
-//     background-color: rgb(100, 100, 104);
-//     height: 100%;
-// }
-
-
