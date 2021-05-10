@@ -1,0 +1,15 @@
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/railon/.rbenv/versions/2.7.2/bin/ruby -I /home/railon/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210510-80548-6j4vn6.rb extconf.rb
+creating Makefile
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20210510-80548-2aroln/skiptrace/internal

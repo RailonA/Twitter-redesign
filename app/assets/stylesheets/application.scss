@@ -14,11 +14,15 @@
  *= require_self
  */
 
- @import "navbar";
- @import "opinion";
-
+@import "navbar";
+@import "opinion";
 
 .container-fluid {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: #dfdfdf;
 }
