@@ -17,6 +17,8 @@ class OpinionsController < ApplicationController
     end
   end
 
+ 
+
   private
 
   def opinions_posts

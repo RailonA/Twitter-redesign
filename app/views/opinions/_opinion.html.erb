@@ -1,4 +1,4 @@
-<div class='bg-white w-75 border rounded-border p-3 my-4 color-light-grey'>
+<div class='bg-white  border rounded-border p-3 my-4 color-light-grey'>
   <div class='d-flex flex-column'>
     <div class='d-flex my-2'>
       <% if opinion.user.photo.attached? %>
@@ -16,8 +16,8 @@
           </div>
         </div>
         <span><%= opinion.text %></span>
-        <span style='font-size: 13px;'>Votes:<%= num_of_votes(opinion) %> </span>
-        <span><%= link_to('vote up', opinion_votes_path(opinion_id: opinion.id), method: :post) %></span>
+        <span style='font-size: 13px;'>Votes:<%= num_of_likes(opinion) %> </span>
+        <span><%= link_to('Like', opinion_likes_path(opinion_id: opinion.id), method: :post) %></span>
       </div>
     </div>
   </div>

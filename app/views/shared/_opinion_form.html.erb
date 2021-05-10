@@ -1,4 +1,4 @@
-<div class="col-9 ">
+<div class="">
 <%= form_with url: "/opinions", method: :post do |f| %>
 <%= f.hidden_field :author_id, value: current_user.id %>
 <%= f.label :text, 'Express yourself' %>

@@ -25,13 +25,13 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+	# simple form
+	gem 'simple_form', '~> 5.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 # User Hirb to enhance console views
 gem 'hirb', '~> 0.7.3'
-# Use cloudinary to host profile pics
-gem 'cloudinary'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

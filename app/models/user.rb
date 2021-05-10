@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_many :opinions, foreign_key: 'author_id'
-    has_many :votes
+    has_many :likes
   
     has_one_attached :photo
     has_one_attached :cover_image

@@ -1,9 +1,9 @@
-<div class="col-3">
+<div class="">
     <div class="text-center">
         <% if @user2.photo.attached? %>
-        <%= cl_image_tag(@user2.photo.key, :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+        <%= image_tag(@user2.photo.key, :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
         <% else %>
-        <%= cl_image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+        <%= image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>300, :height=>300, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
         <% end %>
         <div class='d-flex flex-column w-100'>
             <div class='d-flex justify-content-center align-items-center flex-column flex-md-row'>

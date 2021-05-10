@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'opinions#index'
   resources :opinions, only: %i[new create index] do
-    resources :votes, only: [:create]
+    resources :likes, only: %i[create destroy]
   end
   get '/signup', to: 'users#new'
   resources :users
