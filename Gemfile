@@ -45,7 +45,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 4.0'
-   gem 'sqlite3'
 
 end
 
@@ -59,6 +58,8 @@ group :development do
   gem 'rubocop', '>= 1.0', '< 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'sqlite3'
+
 end
 
 group :test do
