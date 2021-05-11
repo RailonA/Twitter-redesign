@@ -9,7 +9,6 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # gem 'sqlite3', '~> 1.4'
 gem 'bootstrap', '~> 5.0.0.beta2'
 gem 'dotenv-rails'
-gem 'pg'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -35,12 +34,19 @@ gem 'hirb', '~> 0.7.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+
+group :production, :test do
+  gem 'pg'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 4.0'
+   gem 'sqlite3'
+
 end
 
 group :development do
