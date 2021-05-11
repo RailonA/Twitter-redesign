@@ -12,7 +12,7 @@ RSpec.feature 'Opinion', type: :feature do
     fill_in 'session[username]', with: 'user1'
     click_button 'Log in'
     fill_in 'text', with: 'hello'
-    click_button 'Submit new opinion'
+    click_button 'Submit'
     expect(page).to have_content('hello')
   end
 
@@ -24,11 +24,11 @@ RSpec.feature 'Opinion', type: :feature do
     expect(page).to have_content('This is my first post')
   end
 
-  it 'Vote up an opinion' do
+  it 'Like up an opinion' do
     visit login_path
     fill_in 'session[username]', with: 'user2'
     click_button 'Log in'
-    click_link 'vote up'
-    expect(page).to have_content('Votes:1')
+    click_link 'Like'
+    expect(page).to have_content(':1')
   end
 end
