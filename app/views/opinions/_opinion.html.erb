@@ -3,9 +3,9 @@
   <div class='d-flex flex-column'>
     <div class='d-flex bg-light p-2'>
       <% if opinion.user.photo.attached? %>
-      <%= image_tag(opinion.user.photo, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+      <%= cl_image_tag(opinion.user.photo.key, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
       <% else %>
-      <%= image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+      <%= cl_image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
       <% end %>
       <div class='d-flex flex-column w-100 mx-4'>
         <div class='d-flex justify-content-between'>

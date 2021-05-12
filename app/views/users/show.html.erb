@@ -16,7 +16,7 @@
         <div class="col-12">
           <div class="col-12">
             <% if @user2.cover_image.attached? %>
-            <%= image_tag (@user2.cover_image), style: 'width:100%;height:272px;' %>
+            <%= cl_image_tag (@user2.cover_image.key), style: 'width:100%;height:272px;' %>
             <% end %>
           </div>
           <div class="d-flex col-12">
