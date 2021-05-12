@@ -20,4 +20,12 @@
 .container-fluid {
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+html,body {
+  height:100vh;
+}
+
+body {
+  background-color: #c7c7c7;
 }

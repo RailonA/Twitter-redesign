@@ -1,7 +1,7 @@
 
-<div class=' border rounded-border p-3 d-flex justify-content-center '>
+<div class=' border rounded-border p-2 d-flex justify-content-center '>
   <div class='d-flex flex-column'>
-    <div class='d-flex '>
+    <div class='d-flex bg-light p-2'>
       <% if opinion.user.photo.attached? %>
       <%= image_tag(opinion.user.photo, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
       <% else %>

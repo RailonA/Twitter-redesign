@@ -14,19 +14,20 @@
     <div class="">
       <!-- Tweets col -->
         <div class="col-12">
+          <div class="col-12">
             <% if @user2.cover_image.attached? %>
             <%= image_tag (@user2.cover_image), style: 'width:100%;height:272px;' %>
             <% end %>
           </div>
-          <div class="d-flex">
-          <div class="col-9 ">
-            <h4 class="text-center pt-3 pb-3">Users Post</h4>
-            <%= render @own_opinions %>
-          </div>  
-          <div class="p-3">
-            <%= render 'shared/right_navbar' %>
-        </div>
-       </div>
+          <div class="d-flex col-12">
+            <div class="col-8">
+              <h4 class="text-center pt-3 pb-3 ">Users Post</h4>
+              <%= render @own_opinions %>
+            </div>  
+            <div class="p-2 right-navbar col">
+              <%= render 'shared/right_navbar' %>
+            </div>
+         </div>
         </div>
     </div>
 <!-- Close User2 profile info -->
