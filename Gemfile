@@ -29,10 +29,7 @@ gem 'simple_form', '~> 5.1'
 # User Hirb to enhance console views
 gem 'hirb', '~> 0.7.3'
 # Use cloudinary to host profile pics
-# Use Active Storage variant
-gem 'image_processing', '~> 1.2'
-gem 'cloudinary'
-gem 'activestorage-cloudinary-service'
+gem 'cloudinary', '~> 1.20'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -58,7 +55,7 @@ group :development do
   gem 'rubocop', '>= 1.0', '< 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
 group :test do
