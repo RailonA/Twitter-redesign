@@ -29,7 +29,10 @@ gem 'simple_form', '~> 5.1'
 # User Hirb to enhance console views
 gem 'hirb', '~> 0.7.3'
 # Use cloudinary to host profile pics
-gem 'cloudinary', '~> 1.20'
+# Use Active Storage variant
+gem 'image_processing', '~> 1.2'
+gem 'cloudinary'
+gem 'activestorage-cloudinary-service'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
