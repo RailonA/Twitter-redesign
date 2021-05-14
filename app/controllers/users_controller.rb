@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @user2 = User.find(params[:id])
-    @opinions = Opinion.where(author_id: @user).order_by_most_recent
+    @opinions = @user2.opinions.order_by_most_recent
   end
 
   def new

@@ -9,11 +9,15 @@ class OpinionsController < ApplicationController
   end
 
   def create
-    @opinion = Opinion.new(opinion_params)
+    @opinion = current_user.opinions.build(opinion_params)
     if @opinion.save
-      redirect_to '/'
+      flash[:notice] = 'Opinion was created successfully'
+      redirect_to root_path
+    elsif opinion_params[:text] == ''
+      flash[:alert] = 'Please type something'
+      redirect_to root_path
     else
-      render 'new'
+      flash.now[:alert] = 'Something went wrong...'
     end
   end
 
