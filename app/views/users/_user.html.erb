@@ -1,0 +1,18 @@
+<div class="d-flex p-3">
+    <div class="col">
+        <% if user.photo.attached? %>
+        <%= cl_image_tag(user.photo.key, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+        <% else %>
+        <%= cl_image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+        <% end %>
+    </div>
+
+    <div class="col">
+    <h6><%= link_to user.username, user_path(user.id), class: 'post-author' %></h6>
+        <%= form_with url: "/followings", method: :post do |f| %>
+        <%= f.hidden_field :follower_id, value: current_user.id %>
+        <%= f.hidden_field :followed_id, value: user.id %>
+        <%= f.submit "Follow", class: "" %>
+        <% end %>
+    </div>
+</div>

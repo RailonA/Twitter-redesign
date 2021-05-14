@@ -1,0 +1,26 @@
+
+<div class=' border rounded-border p-2 d-flex justify-content-center '>
+    <div class='d-flex bg-light p-2'>
+      <% if opinion.user.photo.attached? %>
+      <%= cl_image_tag(opinion.user.photo.key, :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto) %>
+      <% else %>
+      <%= cl_image_tag("https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif", :width=>70, :height=>70, :gravity=>"face", :radius=>"max", :crop=>"fill", :fetch_format=>:auto, :type=>"fetch") %>
+      <% end %>
+      <div class='d-flex flex-column  '>
+        <div class='d-flex justify-content-between'>
+          <span class='font-weight-bold text-dark'>
+            <%= link_to  opinion.user.username, user_path( opinion.user ) %>
+          </span>
+          <div class=''>
+            <span> <%= opinion.created_at.try(:strftime,("%Y/%m/%d")) %> </span> <br>
+          </div>
+        </div>
+        <span><%= opinion.text %></span>
+        <div class="d-flex">
+        <span><%= link_to('Like', opinion_likes_path(opinion_id: opinion.id), method: :post) %></span>
+        <span>:<%= num_of_likes(opinion) %> </span>
+      </div>
+      </div>
+    </div>
+</div>
+

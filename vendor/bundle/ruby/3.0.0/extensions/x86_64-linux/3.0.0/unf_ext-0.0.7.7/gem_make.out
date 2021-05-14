@@ -1,0 +1,16 @@
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+/home/railon/.rbenv/versions/3.0.1/bin/ruby -I /home/railon/.rbenv/versions/3.0.1/lib/ruby/3.0.0 -r ./siteconf20210503-17462-nrjei1.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\= clean
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\=
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /home/railon/Projects/Odin_On_Rails/twitter-redesign/vendor/bundle/ruby/3.0.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20210503-17462-uv0b4t

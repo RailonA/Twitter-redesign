@@ -1,0 +1,48 @@
+<div class="d-flex" id="content-wrapper">
+<div class="col-3"> 
+<!-- Sidebar -->
+<%= render 'shared/left_navbar' %>
+<!-- Close sidebar -->
+</div>
+  <div class="w-100">
+   <!-- Navbar -->
+    <div class="header-navbar">
+      <%= render 'shared/navbar' %>
+    </div>    
+    <!-- Close Navbar -->
+    <!-- Page Content -->
+    <div class="">
+      <!-- Tweets col -->
+        <div class="col-12">
+          <div class="col-12">
+            <% if @user2.cover_image.attached? %>
+            <%= cl_image_tag (@user2.cover_image.key), style: 'width:100%;height:272px;' %>
+            <% end %>
+          </div>
+          <div class="d-flex col-12">
+            <div class="col-8">
+              <h4 class="text-center pt-3 pb-3 ">Users Post</h4>
+              <%= render @opinions %>
+            </div>  
+            <div class="p-2 right-navbar col">
+              <%= render 'shared/right_navbar' %>
+            </div>
+         </div>
+        </div>
+    </div>
+<!-- Close User2 profile info -->
+</div>
+  </div>
+
+<!-- Close Tweets col -->
+
+<!-- User2 profile info -->
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
